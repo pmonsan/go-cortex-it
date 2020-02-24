@@ -18,49 +18,47 @@ Implementation:
 -----------------
 - three packages containing :<br>
 
-  redis 
-    redisManager.go
-  services 
-    common.go
-	request.go
-	request_test.go
-	statistics.go
-	statistics_test.go
-  main
-    main.go
+  redis<br> 
+    redisManager.go<br>
+  services<br> 
+    common.go<br>
+	request.go<br>
+	request_test.go<br>
+	statistics.go<br>
+	statistics_test.go<br>
+  main<br>
+    main.go<br>
 
 - redisManager.go :<br>
-func SaveData(key string, value int ) error : store requests hits in redis server<br>
-func GetData(key string) (int, error) : Gets request hits from redis server<br>
-func GetMostFrequentRequest() (string, int) : get the most frequent request : the most used request (having the maximum of hits in redis server)<br>
-
-the format of redis keys is : "FIZZBUZZ|int1-int2-limit-str1-str2"
+1. func SaveData(key string, value int ) error : store requests hits in redis server<br>
+2. func GetData(key string) (int, error) : Gets request hits from redis server<br>
+3. func GetMostFrequentRequest() (string, int) : get the most frequent request : the most used request (having the maximum of hits in redis server)<br>
+<br>
+the format of redis keys is : "FIZZBUZZ|int1-int2-limit-str1-str2"<br>
 
 - common.go :<br>
 func CommonFunc(int1, int2, limit int, str1, str2 string) []string :<br>
-  1.Accepts five parameters : three integers int1, int2 and limit, and two strings str1 and str2.
-  2.Returns an array of strings with numbers from 1 to limit, where: all multiples of int1 are replaced by str1,
-all multiples of int2 are replaced by str2, all multiples of int1 and int2 are replaced by str1str2.
+  1. Accepts five parameters : three integers int1, int2 and limit, and two strings str1 and str2.<br>
+  2. Returns an array of strings with numbers from 1 to limit, where: all multiples of int1 are replaced by str1,
+all multiples of int2 are replaced by str2, all multiples of int1 and int2 are replaced by str1str2.<br>
 
 - request.go :<br> 
 func Request(w http.ResponseWriter, r *http.Request) :
-Exposes a REST API endpoint that:
-- Accepts five parameters : three integers int1, int2 and limit, and two strings str1 and str2.
-- Returns a list of strings with numbers from 1 to limit, where: all multiples of int1 are replaced by str1,
-all multiples of int2 are replaced by str2, all multiples of int1 and int2 are replaced by str1str2.
+Exposes a REST API endpoint that:<br>
+  1. Accepts five parameters : three integers int1, int2 and limit, and two strings str1 and str2.<br>
+  2. Returns a list of strings with numbers from 1 to limit, where: all multiples of int1 are replaced by str1,
+all multiples of int2 are replaced by str2, all multiples of int1 and int2 are replaced by str1str2.<br>
 
-- request_test.go :
-implementation of an unit test for request.go
-
-
+- request_test.go :<br>
+implementation of an unit test for request.go<br>
 
 - statistics.go :<br> 
-func Statistics(w http.ResponseWriter, r *http.Request) :
-- Add a statistics endpoint allowing users to know what the most frequent request has been. This endpoint should:
-- Accept no parameter
-- Return the parameters corresponding to the most used request, as well as the number of hits for this request
-
-the format of return is : {'int1': '{int1}', 'int2': '{int2}', 'limit': '{limit}', 'str1': '{str1}', 'str2': '{str2}', 'hits': '{hits}'}
+func Statistics(w http.ResponseWriter, r *http.Request) :<br>
+  1. Add a statistics endpoint allowing users to know what the most frequent request has been. This endpoint should:<br>
+  2. Accept no parameter<br>
+  3. Return the parameters corresponding to the most used request, as well as the number of hits for this request<br>
+<br>
+the format of return is : {'int1': '{int1}', 'int2': '{int2}', 'limit': '{limit}', 'str1': '{str1}', 'str2': '{str2}', 'hits': '{hits}'}<br>
 
 - statistics_test.go :<br>
 implementation of an unit test for statistics.go  
