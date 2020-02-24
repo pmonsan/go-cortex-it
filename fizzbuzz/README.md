@@ -30,9 +30,9 @@ Implementation:
     main.go
 
 - redisManager.go :<br>
-func SaveData(key string, value int ) error : store requests hits in redis server
-func GetData(key string) (int, error) : Gets request hits from redis server
-func GetMostFrequentRequest() (string, int) : get the most frequent request : the most used request (having the maximum of hits in redis server)
+func SaveData(key string, value int ) error : store requests hits in redis server<br>
+func GetData(key string) (int, error) : Gets request hits from redis server<br>
+func GetMostFrequentRequest() (string, int) : get the most frequent request : the most used request (having the maximum of hits in redis server)<br>
 
 the format of redis keys is : "FIZZBUZZ|int1-int2-limit-str1-str2"
 
