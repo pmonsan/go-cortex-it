@@ -67,14 +67,14 @@ implementation of an unit test for statistics.go
 USAGE
 ---------------------------
 
-to install dependencies :
-go get github.com/go-redis/redis
-go get github.com/gorilla/mux
+to install dependencies :<br>
+go get github.com/go-redis/redis<br>
+go get github.com/gorilla/mux<br>
 
-to run : 
-go run main.go
+to run : <br>
+go run main.go<br>
 
-to execute the tests :
+to execute the tests :<br>
 go test fizzbuzz/services
 
   
