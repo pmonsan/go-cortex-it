@@ -19,7 +19,7 @@ Implementation:
 - three packages containing :<br>
 
   redis<br> 
-    redisManager.go<br>
+	redisManager.go<br>
   services<br> 
     common.go<br>
 	request.go<br>
