@@ -19,15 +19,15 @@ Implementation:
 - three packages containing :<br>
 
   redis<br> 
-  &emsp;&emsp;&emsp;redisManager.go<br>
+  &emsp;&emsp;redisManager.go<br>
   services<br> 
-  &emsp;&emsp;&emsp;common.go<br>
-	request.go<br>
-	request_test.go<br>
-	statistics.go<br>
-	statistics_test.go<br>
+  &emsp;&emsp;common.go<br>
+  &emsp;&emsprequest.go<br>
+  &emsp;&emsprequest_test.go<br>
+  &emsp;&emspstatistics.go<br>
+  &emsp;&emspstatistics_test.go<br>
   main<br>
-    main.go<br>
+  &emsp;&emspmain.go<br>
 
 - redisManager.go :<br>
 1. func SaveData(key string, value int ) error : store requests hits in redis server<br>
