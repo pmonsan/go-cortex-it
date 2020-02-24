@@ -22,12 +22,12 @@ Implementation:
   &emsp;&emsp;redisManager.go<br>
   services<br> 
   &emsp;&emsp;common.go<br>
-  &emsp;&emsprequest.go<br>
-  &emsp;&emsprequest_test.go<br>
-  &emsp;&emspstatistics.go<br>
-  &emsp;&emspstatistics_test.go<br>
+  &emsp;&emsp;request.go<br>
+  &emsp;&emsp;request_test.go<br>
+  &emsp;&emsp;statistics.go<br>
+  &emsp;&emsp;statistics_test.go<br>
   main<br>
-  &emsp;&emspmain.go<br>
+  &emsp;&emsp;main.go<br>
 
 - redisManager.go :<br>
 1. func SaveData(key string, value int ) error : store requests hits in redis server<br>
