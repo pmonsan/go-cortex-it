@@ -16,7 +16,7 @@ Bonus question :
 
 Implementation:
 -----------------
-- three packages containing :
+- three packages containing :<br>
 
   redis 
     redisManager.go
@@ -29,20 +29,20 @@ Implementation:
   main
     main.go
 
-- redisManager.go :
+- redisManager.go :<br>
 func SaveData(key string, value int ) error : store requests hits in redis server
 func GetData(key string) (int, error) : Gets request hits from redis server
 func GetMostFrequentRequest() (string, int) : get the most frequent request : the most used request (having the maximum of hits in redis server)
 
 the format of redis keys is : "FIZZBUZZ|int1-int2-limit-str1-str2"
 
-- common.go :
+- common.go :<br>
 func CommonFunc(int1, int2, limit int, str1, str2 string) []string :
 - Accepts five parameters : three integers int1, int2 and limit, and two strings str1 and str2.
 - Returns an array of strings with numbers from 1 to limit, where: all multiples of int1 are replaced by str1,
 all multiples of int2 are replaced by str2, all multiples of int1 and int2 are replaced by str1str2.
 
-- request.go : 
+- request.go :<br> 
 func Request(w http.ResponseWriter, r *http.Request) :
 Exposes a REST API endpoint that:
 - Accepts five parameters : three integers int1, int2 and limit, and two strings str1 and str2.
@@ -54,7 +54,7 @@ implementation of an unit test for request.go
 
 
 
-- statistics.go : 
+- statistics.go :<br> 
 func Statistics(w http.ResponseWriter, r *http.Request) :
 - Add a statistics endpoint allowing users to know what the most frequent request has been. This endpoint should:
 - Accept no parameter
@@ -62,7 +62,7 @@ func Statistics(w http.ResponseWriter, r *http.Request) :
 
 the format of return is : {'int1': '{int1}', 'int2': '{int2}', 'limit': '{limit}', 'str1': '{str1}', 'str2': '{str2}', 'hits': '{hits}'}
 
-- statistics_test.go :
+- statistics_test.go :<br>
 implementation of an unit test for statistics.go  
 
 
