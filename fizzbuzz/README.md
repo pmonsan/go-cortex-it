@@ -30,11 +30,11 @@ Implementation:
   &emsp;&emsp;main.go<br>
 
 - redisManager.go :<br>
-1. func SaveData(key string, value int ) error : store requests hits in redis server<br>
-2. func GetData(key string) (int, error) : Gets request hits from redis server<br>
-3. func GetMostFrequentRequest() (string, int) : get the most frequent request : the most used request (having the maximum of hits in redis server)<br>
+  1. func SaveData(key string, value int ) error : store requests hits in redis server<br>
+  2. func GetData(key string) (int, error) : Gets request hits from redis server<br>
+  3. func GetMostFrequentRequest() (string, int) : get the most frequent request : the most used request (having the maximum of hits in redis server)<br>
 <br>
-  the format of redis keys is : "FIZZBUZZ|int1-int2-limit-str1-str2"<br>
+  &emsp;&emsp;the format of redis keys is : "FIZZBUZZ|int1-int2-limit-str1-str2"<br>
 
 - common.go :<br>
 func CommonFunc(int1, int2, limit int, str1, str2 string) []string :<br>
@@ -58,7 +58,7 @@ func Statistics(w http.ResponseWriter, r *http.Request) :<br>
   2. Accept no parameter<br>
   3. Return the parameters corresponding to the most used request, as well as the number of hits for this request<br>
 <br>
-  the format of return is : {'int1': '{int1}', 'int2': '{int2}', 'limit': '{limit}', 'str1': '{str1}', 'str2': '{str2}', 'hits': '{hits}'}<br>
+  &emsp;&emsp;the format of return is : {'int1': '{int1}', 'int2': '{int2}', 'limit': '{limit}', 'str1': '{str1}', 'str2': '{str2}', 'hits': '{hits}'}<br>
 
 - statistics_test.go :<br>
 implementation of an unit test for statistics.go  
