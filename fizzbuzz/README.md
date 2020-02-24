@@ -67,6 +67,8 @@ implementation of an unit test for statistics.go
 USAGE
 ---------------------------
 
+install a redis server with default port 6379<br>
+
 to install dependencies :<br>
 go get github.com/go-redis/redis<br>
 go get github.com/gorilla/mux<br>
