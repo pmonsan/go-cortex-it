@@ -37,9 +37,9 @@ func GetMostFrequentRequest() (string, int) : get the most frequent request : th
 the format of redis keys is : "FIZZBUZZ|int1-int2-limit-str1-str2"
 
 - common.go :<br>
-func CommonFunc(int1, int2, limit int, str1, str2 string) []string :
-- Accepts five parameters : three integers int1, int2 and limit, and two strings str1 and str2.
-- Returns an array of strings with numbers from 1 to limit, where: all multiples of int1 are replaced by str1,
+func CommonFunc(int1, int2, limit int, str1, str2 string) []string :<br>
+  1.Accepts five parameters : three integers int1, int2 and limit, and two strings str1 and str2.
+  2.Returns an array of strings with numbers from 1 to limit, where: all multiples of int1 are replaced by str1,
 all multiples of int2 are replaced by str2, all multiples of int1 and int2 are replaced by str1str2.
 
 - request.go :<br> 
